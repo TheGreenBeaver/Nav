@@ -20,14 +20,14 @@ class ActivityEndGame : AppCompatActivity() {
         val toFirstBtn = findViewById<Button>(R.id.endgame_to_first_btn)
         toFirstBtn.setOnClickListener {
             val intent = Intent(this, ActivityOne::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
         }
 
         val toSecondBtn = findViewById<Button>(R.id.endgame_to_second_btn)
         toSecondBtn.setOnClickListener {
             val intent = Intent(this, ActivityTwo::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
         }
 
