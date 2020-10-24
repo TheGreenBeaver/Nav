@@ -13,8 +13,9 @@ class ActivityThree : AppCompatActivity() {
 
         val toFirstBtn = findViewById<Button>(R.id.third_to_first_btn)
         toFirstBtn.setOnClickListener {
-            setResult(RequestCodes.THIRD_TO_FIRST.getValue())
-            finish()
+            val intent = Intent(this, ActivityOne::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
         }
 
         val toSecondBtn = findViewById<Button>(R.id.third_to_second_btn)

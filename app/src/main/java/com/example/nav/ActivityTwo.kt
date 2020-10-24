@@ -18,22 +18,12 @@ class ActivityTwo : AppCompatActivity() {
 
         val toThirdBtn = findViewById<Button>(R.id.second_to_third_btn)
         toThirdBtn.setOnClickListener {
-            startActivityForResult(
-                Intent(this, ActivityThree::class.java),
-                RequestCodes.THIRD_TO_FIRST.getValue()
-            )
+            startActivity(Intent(this, ActivityThree::class.java))
         }
 
         val toAboutNav = findViewById<View>(R.id.navigation_about)
         toAboutNav.setOnClickListener {
             startActivity(Intent(this, ActivityAbout::class.java))
         }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == resultCode) {
-            finish()
-        }
-        super.onActivityResult(requestCode, resultCode, data)
     }
 }
