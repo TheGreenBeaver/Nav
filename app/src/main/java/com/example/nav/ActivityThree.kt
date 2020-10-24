@@ -27,5 +27,12 @@ class ActivityThree : AppCompatActivity() {
         toAboutNav.setOnClickListener {
             startActivity(Intent(this, ActivityAbout::class.java))
         }
+
+        val toGame = findViewById<Button>(R.id.play_game_3_btn)
+        toGame.setOnClickListener {
+            val intent = Intent(this, ActivityGame::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+            startActivity(intent)
+        }
     }
 }

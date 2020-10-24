@@ -8,4 +8,9 @@
     <string name="activity_3">Activity 3</string>
     <string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vulputate dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. In tristique egestas odio sed semper. Proin risus purus, ullamcorper sed maximus non, facilisis ornare justo. Ut fringilla. </string>
     <string name="about">About</string>
+    <string name="playing_now">You are playing the game now!</string>
+    <string name="press_to_win">Press me to win!</string>
+    <string name="play_game">Play game</string>
+    <string name="congrats">Congrats!</string>
+    <string name="restart">Restart</string>
 </resources>

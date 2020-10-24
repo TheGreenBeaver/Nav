@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/congrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/congrats"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/endgame_to_first_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/endgame_to_first_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/to_first"
+        app:layout_constraintBottom_toTopOf="@+id/endgame_to_second_btn"
+        app:layout_constraintEnd_toEndOf="@+id/endgame_to_second_btn"
+        app:layout_constraintStart_toStartOf="@+id/endgame_to_second_btn"
+        app:layout_constraintTop_toBottomOf="@+id/congrats" />
+
+    <Button
+        android:id="@+id/endgame_to_second_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_second"
+        app:layout_constraintBottom_toTopOf="@+id/endgame_to_third_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endgame_to_first_btn" />
+
+    <Button
+        android:id="@+id/endgame_to_third_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/to_third"
+        app:layout_constraintBottom_toTopOf="@+id/restart_btn"
+        app:layout_constraintEnd_toEndOf="@+id/endgame_to_second_btn"
+        app:layout_constraintStart_toStartOf="@+id/endgame_to_second_btn"
+        app:layout_constraintTop_toBottomOf="@+id/endgame_to_second_btn" />
+
+    <Button
+        android:id="@+id/restart_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:text="@string/restart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/endgame_to_second_btn"
+        app:layout_constraintStart_toStartOf="@+id/endgame_to_second_btn"
+        app:layout_constraintTop_toBottomOf="@+id/endgame_to_third_btn" />
+
+    <include layout="@layout/bottom_nav" />
+</androidx.constraintlayout.widget.ConstraintLayout>
