@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Nav</string>
+    <string name="app_name">Nav1</string>
+    <string name="to_second">To Second</string>
+    <string name="activity_1">Activity 1</string>
+    <string name="to_first">To first</string>
+    <string name="to_third">To third</string>
+    <string name="activity_2">Activity 2</string>
+    <string name="activity_3">Activity 3</string>
+    <string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vulputate dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. In tristique egestas odio sed semper. Proin risus purus, ullamcorper sed maximus non, facilisis ornare justo. Ut fringilla. </string>
+    <string name="about">About</string>
 </resources>
