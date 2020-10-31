@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentOne">
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.example.nav.FragmentOne"
+        android:label="FragmentOne" >
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentGame"
+            app:destination="@id/fragmentGame"
+            app:popUpTo="@id/fragmentOne"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.example.nav.FragmentTwo"
+        android:label="FragmentTwo" >
+        <action
+            android:id="@+id/action_fragmentTwo_to_fragmentThree"
+            app:destination="@id/fragmentThree" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGame"
+        android:name="com.example.nav.FragmentGame"
+        android:label="FragmentGame" >
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentEndGame"
+            app:destination="@id/fragmentEndGame"
+            app:popUpTo="@id/fragmentGame"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEndGame"
+        android:name="com.example.nav.FragmentEndGame"
+        android:label="FragmentEndGame" >
+        <action
+            android:id="@+id/action_fragmentEndGame_to_fragmentThree"
+            app:destination="@id/fragmentThree"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_fragmentEndGame_to_fragmentTwo"
+            app:destination="@id/fragmentTwo"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_fragmentEndGame_to_fragmentGame"
+            app:destination="@id/fragmentGame"
+            app:popUpTo="@id/fragmentEndGame"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentThree"
+        android:name="com.example.nav.FragmentThree"
+        android:label="FragmentThree" >
+        <action
+            android:id="@+id/action_fragmentThree_to_fragmentGame"
+            app:destination="@id/fragmentGame"
+            app:popUpTo="@id/fragmentThree"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAbout"
+        android:name="com.example.nav.FragmentAbout"
+        android:label="FragmentAbout" />
+</navigation>
