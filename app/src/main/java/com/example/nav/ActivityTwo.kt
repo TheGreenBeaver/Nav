@@ -2,14 +2,12 @@ package com.example.nav
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 
-class ActivityTwo : AppCompatActivity() {
+class ActivityTwo : AbstractBottomNavActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_two)
+        super.onCreate(savedInstanceState)
 
         val toFirstBtn = findViewById<Button>(R.id.second_to_first_btn)
         toFirstBtn.setOnClickListener {
@@ -22,11 +20,6 @@ class ActivityTwo : AppCompatActivity() {
                 Intent(this, ActivityThree::class.java),
                 RequestCodes.THIRD_TO_FIRST.getValue()
             )
-        }
-
-        val toAboutNav = findViewById<View>(R.id.navigation_about)
-        toAboutNav.setOnClickListener {
-            startActivity(Intent(this, ActivityAbout::class.java))
         }
     }
 
