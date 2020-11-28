@@ -15,6 +15,7 @@ class ActivityThree : AppCompatActivity() {
         toFirstBtn.setOnClickListener {
             val intent = Intent(this, ActivityOne::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
         }
 
